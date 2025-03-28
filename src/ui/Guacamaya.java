@@ -81,7 +81,12 @@ public class Guacamaya {
             }
             return total;
         }
-        
+         
+     
+             //Descripcion: Este se encarga de calcular el promedio de los productos 
+             //pre: Los precios ya estan inicializados
+             //pos: Su salida es el promedio de los productos 
+
         private static double PrecioPromedio() {
             double totalPrecio = 0;
             for (double price : precio) {
@@ -90,6 +95,11 @@ public class Guacamaya {
             return NumeroProductos > 0 ? totalPrecio / NumeroProductos: 0;
         }
         
+     
+        //Descripcion: Este metodo se usa para las unidades venidas en el dia 
+        //pre: Los arreglos de los precios estan iniciados
+        //pos: Su salida es el total de unidades que se totalizan 
+        
         private static double TotalVendidos() {
             double totalVendido = 0;
             for (int i = 0; i < NumeroProductos; i++) {
@@ -97,6 +107,9 @@ public class Guacamaya {
             }
             return totalVendido;
         }
+        //Desripcion: Este metodo se usa para identificar los productos sobre el limite estipulado 
+        //pre: Lo arreglos de los precios y cantidades ya estam establecidos 
+        //pos: su salida son los productos que sobre pasan el limite
         
         private static int ProductosSobreLimite(double limit) {
             int count = 0;
